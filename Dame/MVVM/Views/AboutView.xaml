@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Dame.MVVM.Views.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dame.MVVM.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="1080" d:Background="#EEEEEE">
+    <StackPanel x:Name="LoadGameMenu" Height="510">
+        <TextBlock FontSize="30" Foreground="#31363F" TextAlignment="Center" FontFamily="/assets/#RocknRoll One"
+                   Text="Develop by: Stamate Teodor" />
+        <TextBlock FontSize="25" Foreground="#31363F" TextAlignment="Center" FontFamily="/assets/#RocknRoll One"
+                   Margin="0,25,0,0" Text="Istitutional Addres: teodor.stamate@student.unitbv.ro"/>
+        <TextBlock Width="700" FontSize="25" Foreground="#31363F" TextAlignment="Justify" FontFamily="/assets/#RocknRoll One" TextWrapping="Wrap"
+                   Margin="0,25,0,0" Text="Checkers, also known as draughts , is a group of strategy board games for two players which involve forward movements of uniform game pieces and mandatory captures by jumping over opponent pieces. "/>
+        <Button Height="60" Width="150" Margin="0,50,0,0" Command="{Binding BackToHelpMenuCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/back.png"/>
+        </Button>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Dame.MVVM.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:views="clr-namespace:Dame.MVVM.Views"
+             xmlns:viewModels="clr-namespace:Dame.MVVM.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1080"
+             Height="768" Width="1080"
+             Background="#EEEEEE"
+             BorderThickness="1,40,1,1" BorderBrush="#222831">
+    <StackPanel>
+        <Image Source="/assets/title.png" Height="155"></Image>
+        <ContentControl Margin="0,60,0,0" Height="510" Content="{Binding NavigationService.CurrentMenuView}"/>
+    </StackPanel>
+</UserControl>

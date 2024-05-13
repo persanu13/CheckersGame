@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<GameLogic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ForceJump="true">
+  <playerRed NumberPieces="10" PlayerColor="Red" />
+  <playerBlue NumberPieces="10" PlayerColor="Blue" />
+  <CurrentPlayer NumberPieces="10" PlayerColor="Blue" />
+  <Table Size="8">
+    <Pieces>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="1" Y="0" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="3" Y="0" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="5" Y="0" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="7" Y="0" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="0" Y="1" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="2" Y="1" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="6" Y="1" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="1" Y="2" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="3" Y="2" />
+      </Piece>
+      <Piece IsKing="false" Color="Blue" SourceImage="/assets/men_blue.png">
+        <Coordinates X="7" Y="2" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="0" Y="5" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="2" Y="5" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="1" Y="6" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="5" Y="4" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="5" Y="6" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="7" Y="6" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="0" Y="7" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="2" Y="7" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="4" Y="7" />
+      </Piece>
+      <Piece IsKing="false" Color="Red" SourceImage="/assets/men_red.png">
+        <Coordinates X="6" Y="7" />
+      </Piece>
+    </Pieces>
+    <TableSituation>
+      <ArrayOfPieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+      </ArrayOfPieceColor>
+      <ArrayOfPieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+      </ArrayOfPieceColor>
+      <ArrayOfPieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Blue</PieceColor>
+      </ArrayOfPieceColor>
+      <ArrayOfPieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+      </ArrayOfPieceColor>
+      <ArrayOfPieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+      </ArrayOfPieceColor>
+      <ArrayOfPieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+      </ArrayOfPieceColor>
+      <ArrayOfPieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+      </ArrayOfPieceColor>
+      <ArrayOfPieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+        <PieceColor>Red</PieceColor>
+        <PieceColor>None</PieceColor>
+      </ArrayOfPieceColor>
+    </TableSituation>
+  </Table>
+</GameLogic>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1A6B98E-7C7D-4969-9E25-6E2EB4489F6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dame</RootNamespace>
+    <AssemblyName>Dame</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Core\ViewModel.cs" />
+    <Compile Include="MVVM\Models\Piece.cs" />
+    <Compile Include="MVVM\Models\Player.cs" />
+    <Compile Include="MVVM\Models\Table.cs" />
+    <Compile Include="MVVM\ViewModels\AboutVM.cs" />
+    <Compile Include="MVVM\ViewModels\GameVM.cs" />
+    <Compile Include="MVVM\ViewModels\HelpMenuVM.cs" />
+    <Compile Include="MVVM\ViewModels\LoadGameVM.cs" />
+    <Compile Include="MVVM\ViewModels\MainMenuVM.cs" />
+    <Compile Include="MVVM\ViewModels\MainWindowVM.cs" />
+    <Compile Include="MVVM\ViewModels\MoveVM.cs" />
+    <Compile Include="MVVM\ViewModels\NewGameMenuVM.cs" />
+    <Compile Include="MVVM\ViewModels\PieceVM.cs" />
+    <Compile Include="MVVM\ViewModels\RulesVM.cs" />
+    <Compile Include="MVVM\ViewModels\StatisticsVM.cs" />
+    <Compile Include="MVVM\Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\GameView.xaml.cs">
+      <DependentUpon>GameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\HelpMenuView.xaml.cs">
+      <DependentUpon>HelpMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\LoadGameMenuView.xaml.cs">
+      <DependentUpon>LoadGameMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\MainMenuView.xaml.cs">
+      <DependentUpon>MainMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\NewGameMenuView.xaml.cs">
+      <DependentUpon>NewGameMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\RulesView.xaml.cs">
+      <DependentUpon>RulesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\StatisticsView.xaml.cs">
+      <DependentUpon>StatisticsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\GameLogic.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\UiServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MVVM\ViewModels\MenuVM.cs" />
+    <Compile Include="MVVM\Views\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="assets\RocknRollOne-Regular.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="gamesSaved\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MVVM\Views\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\GameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\HelpMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\LoadGameMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\MainMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\NewGameMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\RulesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\StatisticsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ImageButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\RadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\new_game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\load_game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\exit_game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\new_game_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\exit_game_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\help_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\load_game_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\start_game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\start_game_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\back_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\about_hover.png" />
+    <Resource Include="assets\instruction.png" />
+    <Resource Include="assets\instruction_hover.png" />
+    <Resource Include="assets\statistics.png" />
+    <Resource Include="assets\statistics_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\king_red.png" />
+    <Resource Include="assets\king_blue.png" />
+    <Resource Include="assets\men_blue.png" />
+    <Resource Include="assets\men_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\swich_button_blue.png" />
+    <Resource Include="assets\swich_button_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\restart.png" />
+    <Resource Include="assets\restart_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\save_game.png" />
+    <Resource Include="assets\save_game_hover.png" />
+    <Resource Include="assets\x_button.png" />
+    <Resource Include="assets\x_button_hover.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

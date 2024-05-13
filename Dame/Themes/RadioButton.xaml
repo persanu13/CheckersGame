@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="LargeRadioButton" TargetType="RadioButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="#31363F"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="FontFamily" Value="/assets/#RocknRoll One"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <!-- Customized radio button circle -->
+                        <Ellipse x:Name="radioButtonCircle" 
+                                 Grid.Row="1" 
+                                 Fill="#D77272"
+                                 Stroke="Black"
+                                 StrokeThickness="3"
+                                 Width="40" Height="40"/>
+                        <!-- Content -->
+                        <ContentPresenter Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Change the size of the circle when checked -->
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="radioButtonCircle" Property="Fill" Value="#72D77C"/>
+                        </Trigger>
+                      
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Dame.MVVM.Views.MainMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dame.MVVM.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="1080" d:Background="#EEEEEE">
+    <StackPanel x:Name="MainMenu" Height="510" Width="1080">
+        <Button Height="60" Width="280" Command="{Binding NavigateToNewGameMenuCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/new_game.png"/>
+        </Button>
+        <Button Height="60" Width="300" Margin="0,50,0,0" Command="{Binding NavigateToLoadGameMenuCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/load_game.png"/>
+        </Button>
+        <Button Height="60" Width="125" Margin="0,50,0,0" Command="{Binding NavigateToHelpMenuCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/help.png"/>
+        </Button>
+        <Button Height="60" Width="265" Margin="0,50,0,0" Command="{Binding ExitAppCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/exit_game.png"/>
+        </Button>
+    </StackPanel>
+</UserControl>

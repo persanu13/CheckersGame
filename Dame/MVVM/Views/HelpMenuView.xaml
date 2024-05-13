@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Dame.MVVM.Views.HelpMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dame.MVVM.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="1080" d:Background="#EEEEEE">
+    <StackPanel x:Name="HelpMenu" Height="510">
+        <Button Height="60" Width="170" Command="{Binding NavigateToAboutCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/about.png"/>
+        </Button>
+        <Button Height="60" Width="300" Margin="0,50,0,0" Command="{Binding NavigateToRulesCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/instruction.png"/>
+        </Button>
+        <Button Height="60" Width="250" Margin="0,50,0,0" Command="{Binding NavigateToStatisticsCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/statistics.png"/>
+        </Button>
+        <Button Height="60" Width="150" Margin="0,50,0,0" Command="{Binding BackToMainMenuCommand}" Style="{StaticResource ImageButtonStyle}" MouseEnter="ButtonHover" MouseLeave="ButtonDefault">
+            <Image Source="/assets/back.png"/>
+        </Button>
+    </StackPanel>
+</UserControl>
